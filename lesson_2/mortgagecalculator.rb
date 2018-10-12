@@ -102,7 +102,7 @@ loop do
   prompt "Please enter the loan amount"
   loop do
     loan_amount = gets.chomp
-    if is_valid?(loan_amount)
+    if valid?(loan_amount)
       loan_amount = loan_amount.gsub(/[^0-9]/, '')
       break
     else
@@ -113,7 +113,7 @@ loop do
   prompt "Please enter the APR"
   loop do
     apr = gets.chomp
-    if is_valid?(apr)
+    if valid?(apr)
       break
     else
       prompt "Please enter a valid APR."
@@ -123,7 +123,7 @@ loop do
   prompt "Please enter the loan duration in years."
   loop do
     loan_duration = gets.chomp
-    if is_valid?(loan_duration)
+    if valid?(loan_duration)
       break
     else
       prompt "Please enter a valid loan duration"
